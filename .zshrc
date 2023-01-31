@@ -103,6 +103,10 @@ source $ZSH/oh-my-zsh.sh
 ## Personal setup
 source $HOME/Self/config/system/environment.sh
 export BROWSER="google-chrome-stable"
+export EDITOR='nvim'
+
+# Aliases
+source /home/anshai/Self/config/system/aliases.sh
 
 ## Start starship (https://starship.rs/)
 eval "$(starship init zsh)"

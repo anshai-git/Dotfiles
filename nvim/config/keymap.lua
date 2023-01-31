@@ -38,6 +38,11 @@ keymap("v", "<A-k>", ":MoveBlock(-1) <CR>", noremap_silent)
 keymap("v", "<A-h>", ":MoveHBlock(-1) <CR>", noremap_silent)
 keymap("v", "<A-l>", ":MoveHBlock(1) <CR>", noremap_silent)
 
+-- Append empty line
+keymap("n", "<S-Enter>", "O<ESC>", noremap_silent)
+keymap("n", "<Enter>", "o<ESC>", noremap_silent)
+
+-- Telescope
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
