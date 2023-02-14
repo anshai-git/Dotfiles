@@ -1,90 +1,70 @@
+local fn = vim.fn
+local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
+if fn.empty(fn.glob(install_path)) > 0 then
+  packer_bootstrap = fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
+end
+
 return require('packer').startup(function(use)
-  -- just packer managing itself
-  use 'wbthomason/packer.nvim'
+    -- Let packer manage itself
+    use 'wbthomason/packer.nvim'
 
-  -- color theme
-  use "savq/melange"
+    -- Nord theme
+    use 'arcticicestudio/nord-vim'
 
-  -- icons
-  use 'ryanoasis/vim-devicons'
+    -- Status line
+    use 'itchyny/lightline.vim'
 
-  -- LSP
-  use 'neovim/nvim-lspconfig'
+      -- commenting utility
+    use 'terrortylor/nvim-comment'
 
-  -- LSP / DAP / Linter / Formatter installation utility
-  use { "williamboman/mason.nvim" }
+    -- bracket pair closing utility
+    use {
+      "windwp/nvim-autopairs",
+      config = function() require("nvim-autopairs").setup {} end
+    }
 
-  -- Emmet
-  use 'mattn/emmet-vim'
+    -- code moving utility
+    use 'fedepujol/move.nvim'
 
-  -- NULL-LS
-  use({
-    "jose-elias-alvarez/null-ls.nvim",
-    config = function()
-        require("null-ls").setup()
-    end,
-    requires = { "nvim-lua/plenary.nvim" },
-  })
-  
-  -- Autocompletion
-  use 'hrsh7th/cmp-nvim-lsp'
-  use 'hrsh7th/cmp-buffer'
-  use 'hrsh7th/cmp-path'
-  use 'hrsh7th/cmp-cmdline'
-  use 'hrsh7th/nvim-cmp'
-  -- lua snippet engine
-  use 'L3MON4D3/LuaSnip'
-  use 'saadparwaiz1/cmp_luasnip'
+      -- FZF
+    use 'junegunn/fzf'
+    use 'junegunn/fzf.vim'
 
-  -- commenting utility
-  use 'terrortylor/nvim-comment'
+      -- Tree Sitter
+    use {
+     'nvim-treesitter/nvim-treesitter',
+      run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
+    }
 
-  -- bracket pair closing utility
-  use {
-	  "windwp/nvim-autopairs",
-    config = function() require("nvim-autopairs").setup {} end
-  }
+    -- Wildmenu
+    use {
+      'gelguy/wilder.nvim',
+      config = function()
+      end,
+    }
 
-  -- code moving utility
-  use 'fedepujol/move.nvim'
+    if packer_bootstrap then
+      require('packer').sync()
+    end
 
-  -- Telescope
-  use {
-    'nvim-telescope/telescope.nvim', tag = '0.1.0',
-    -- or                          , branch = '0.1.x',
-    requires = { {'nvim-lua/plenary.nvim'} }
-  }
+    -- Mason
+    use "williamboman/mason.nvim"
+    use {
+        'ms-jpq/coq.artifacts',
+        branch = 'artifacts'
+    }
 
-  -- FZF
-  use 'junegunn/fzf'
-  use 'junegunn/fzf.vim'
+    --Lsp && mason config
+    use {
+        "williamboman/mason-lspconfig.nvim",
+        "neovim/nvim-lspconfig"
+    }
+    
 
-  -- Tree Sitter
-  use {
-   'nvim-treesitter/nvim-treesitter',
-    run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
-  }
-
-  -- Wildmenu
-  use {
-    'gelguy/wilder.nvim',
-    config = function()
-  end,
-
-  -- Markdown preview 
-  use {
-      "iamcco/markdown-preview.nvim",
-      run = function() vim.fn["mkdp#util#install"]() end,
-  },
-
-  use { 
-    "iamcco/markdown-preview.nvim",
-    run = "cd app && npm install",
-    setup = function() vim.g.mkdp_filetypes = { "markdown" } end,
-    ft = { "markdown" },
-  }
-
-
-}
+    -- Autocompletion
+    use {
+        'ms-jpq/coq_nvim',
+        branch = 'coq'
+    }
 
 end)
