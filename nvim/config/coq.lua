@@ -4,8 +4,8 @@ vim.o.showmode = false
 vim.g.coq_settings = {
   auto_start = 'shut-up',
   keymap = {
-    recommended = false,
-    jump_to_mark = "<c-,>"
+    recommended = true,
+    -- jump_to_mark = "<c-,>"
   },
   clients = {
     paths = {
@@ -19,7 +19,19 @@ vim.g.coq_settings = {
   },
   display = {
     ghost_text = {
-      enabled = true
+      enabled = false
+    },
+    preview = {
+        border = {
+            {"", "NormalFloat"},
+            {"", "NormalFloat"},
+            {"", "NormalFloat"},
+            {" ", "NormalFloat"},
+            {"", "NormalFloat"},
+            {"", "NormalFloat"},
+            {"", "NormalFloat"},
+            {" ", "NormalFloat"}
+			}
     }
   }
 }
