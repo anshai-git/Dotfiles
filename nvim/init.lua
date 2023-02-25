@@ -11,7 +11,7 @@ require 'config.mason'
 -- require 'config.lsp'
 -- require 'config.coq'
 
--- Lsp zero
+-- Lsp zero <3
 require 'config.lsp_zero'
 
 -- Java Lsp
