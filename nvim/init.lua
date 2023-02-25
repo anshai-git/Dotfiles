@@ -11,8 +11,11 @@ require 'config.mason'
 -- require 'config.lsp'
 -- require 'config.coq'
 
---Lsp zero
+-- Lsp zero
 require 'config.lsp_zero'
+
+-- Java Lsp
+-- require 'config.nvim_jdtls'
 
 require 'config.nvim_tree'
 require 'config.which_key'
@@ -22,3 +25,4 @@ require 'config.todo_comments'
 require 'config.git_signs'
 require 'config.null_ls'
 require 'config.emmet'
+require 'config.dired'

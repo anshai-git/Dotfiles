@@ -4,7 +4,7 @@ wk.register({
     f = {
         name = "Telescope",
         f = { "<cmd>Telescope find_files<cr>", "Find File" },
-        g = { "<cmd>Telescope live_grep<cr>", "Live Grep"}
+        g = { "<cmd>Telescope live_grep<cr>", "Live Grep" },
     },
     b = {
         name = "Bufferline",
@@ -15,7 +15,7 @@ wk.register({
         m = { "<cmd>BufferLineCloseRight<cr>", "Close Right" },
         n = { "<cmd>BufferLineCloseLeft<cr>", "Close Left" },
         L = { "<cmd>BufferLineMoveNext<cr>", "Move right" },
-        H = { "<cmd>BufferLineMovePrev<cr>", "Move left" }
+        H = { "<cmd>BufferLineMovePrev<cr>", "Move left" },
     },
     e = {
         name = "NvimTree",
@@ -41,10 +41,14 @@ wk.register({
         n = { "<cmd>Gitsigns toggle_numhl<cr>", "Toggle num hi" },
         s = { "<cmd>Gitsigns toggle_signs<cr>", "Toggle signs" },
         d = { "<cmd>Gitsigns toggle_deleted<cr>", "Toggle deleted" },
-        w = { "<cmd>Gitsigns toggle_word_diff<cr>", "Toggle word diff" }
+        w = { "<cmd>Gitsigns toggle_word_diff<cr>", "Toggle word diff" },
     },
     l = {
         name = "LSP",
         f = { "<cmd>lua vim.lsp.buf.format({ timeout_ms = 2000 })<cr>", "Format" },
     },
+    d = {
+        name = "Dired",
+        d = { "<cmd>Dired<cr>", "Open Dired" }
+    }
 }, { prefix = "<leader>" })

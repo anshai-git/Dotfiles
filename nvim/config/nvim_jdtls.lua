@@ -1,35 +1,16 @@
 local home = os.getenv("HOME")
 local jdtls = require("jdtls")
 
-local lsp = require("lsp-zero").preset({
-    name = "minimal",
-    set_lsp_keymaps = true,
-    manage_nvim_cmp = true,
-    suggest_lsp_servers = false,
-})
-
--- make sure this servers are installed
--- see :help lsp-zero.ensure_installed()
-lsp.ensure_installed({
-    "rust_analyzer",
-    "tsserver",
-    "eslint",
-    "jdtls",
-})
-
--- JDTLS SETUP START
--- *****************
-
 -- File types that signify a Java project's root directory. This will be
 -- used by eclipse to determine what constitutes a workspace
-local root_markers_jdtls = { "gradlew", "mvnw", ".git" }
-local root_dir_jdtls = require("jdtls.setup").find_root(root_markers_jdtls)
+local root_markers = { "gradlew", "mvnw", ".git" }
+local root_dir = require("jdtls.setup").find_root(root_markers)
 
 -- eclipse.jdt.ls stores project specific data within a folder. If you are working
 -- with multiple different projects, each project must use a dedicated data directory.
 -- This variable is used to configure eclipse to use the directory name of the
--- current project found using the root_marker_jdtls as the folder for project specific data.
-local workspace_folder = home .. "/.local/share/eclipse/" .. vim.fn.fnamemodify(root_dir_jdtls, ":p:h:t")
+-- current project found using the root_marker as the folder for project specific data.
+local workspace_folder = home .. "/.local/share/eclipse/" .. vim.fn.fnamemodify(root_dir, ":p:h:t")
 
 -- Helper function for creating keymaps
 function nnoremap(rhs, lhs, bufopts, desc)
@@ -39,7 +20,7 @@ end
 
 -- The on_attach function is used to set key maps after the language server
 -- attaches to the current buffer
-local on_attach_jdt_ls = function(client, bufnr)
+local on_attach = function(client, bufnr)
     -- Regular Neovim LSP client keymappings
     local bufopts = { noremap = true, silent = true, buffer = bufnr }
     nnoremap("gD", vim.lsp.buf.declaration, bufopts, "Go to declaration")
@@ -77,14 +58,12 @@ local on_attach_jdt_ls = function(client, bufnr)
     )
 end
 
-local config_jdtls = {
+local config = {
     flags = {
         debounce_text_changes = 80,
     },
-    on_attach = on_attach_jdt_ls, -- We pass our on_attach keybindings to the configuration map
-    root_dir = function ()
-        return root_dir_jdtls -- Set the root directory to our found root_marker
-    end,
+    on_attach = on_attach, -- We pass our on_attach keybindings to the configuration map
+    root_dir = root_dir, -- Set the root directory to our found root_marker
     -- Here you can configure eclipse.jdt.ls specific settings
     -- These are defined by the eclipse.jdt.ls project and will be passed to eclipse when starting.
     -- See https://github.com/eclipse/eclipse.jdt.ls/wiki/Running-the-JAVA-LS-server-from-the-command-line#initialize-request
@@ -171,14 +150,9 @@ local config_jdtls = {
         "-Declipse.application=org.eclipse.jdt.ls.core.id1",
         "-Dosgi.bundles.defaultStartLevel=4",
         "-Declipse.product=org.eclipse.jdt.ls.core.product",
-        "-Dosgi.checkConfiguration=true",
-        -- "-Dosgi.sharedConfiguration.area=" + str(shared_config_path),
         "-Dlog.protocol=true",
         "-Dlog.level=ALL",
-
-        "-Xms1G",
         "-Xmx4g",
-
         "--add-modules=ALL-SYSTEM",
         "--add-opens",
         "java.base/java.util=ALL-UNNAMED",
@@ -192,7 +166,7 @@ local config_jdtls = {
         -- The jar file is located where jdtls was installed. This will need to be updated
         -- to the location where you installed jdtls
         "-jar",
-        vim.fn.glob("/home/anshai/.local/share/nvim/mason/packages/jdtls/bin/jdtls"),
+        vim.fn.glob("/home/anshai/.local/share/nvim/mason/packages/jdtls/features/org.eclipse.equinox.executable_*.jar"),
 
         -- The configuration for jdtls is also placed where jdtls was installed. This will
         -- need to be updated depending on your environment
@@ -205,56 +179,6 @@ local config_jdtls = {
     },
 }
 
--- lsp.configure('jdtls', config_jdtls)
-
--- *****************
--- JDTLS SETUP END
-
-lsp.setup_nvim_cmp({
-    view = {
-        entries = "native" -- can be "custom", "wildmenu" or "native"
-    },
-    window = {
-        completion = {
-            winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,Search:None",
-            col_offset = -3,
-            side_padding = 0,
-        },
-    },
-    formatting = {
-        -- changing the order of fields so the icon is the first
-        fields = { "kind", "abbr", "menu" },
-
-        -- here is where the change happens
-        -- format = function(entry, item)
-        --     local menu_icon = {
-        --         nvim_lsp = "[LSP]",
-        --         luasnip = "[LuaSnip]",
-        --         buffer = "[Buffer]",
-        --         path = "[Path]",
-        --         nvim_lua = "[Lua]",
-        --     }
-        --
-        --     -- Kind icons
-        --     item.kind = string.format("%s %s", kind_icons[item.kind], item.kind) -- This concatonates the icons with the name of the item kind
-        --
-        --     item.menu = menu_icon[entry.source.name]
-        --     return item
-        -- end,
-
-        format = function(entry, vim_item)
-            local kind = require("lspkind").cmp_format({ mode = "symbol_text", maxwidth = 50 })(entry, vim_item)
-            local strings = vim.split(kind.kind, "%s", { trimempty = true })
-            kind.kind = " " .. (strings[1] or "") .. " "
-            kind.menu = "    (" .. (strings[2] or "") .. ")"
-
-            return kind
-        end,
-    },
-})
-
-
--- (Optional) Configure lua language server for neovim
-lsp.nvim_workspace()
-
-lsp.setup()
+-- Finally, start jdtls. This will run the language server using the configuration we specified,
+-- setup the keymappings, and attach the LSP client to the current buffer
+-- jdtls.start_or_attach(config)
