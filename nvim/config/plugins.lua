@@ -11,7 +11,7 @@ return require("packer").startup(function(use)
     use("wbthomason/packer.nvim")
 
     -- Color themes
-    use("arcticicestudio/nord-vim")
+    use("anshai1/nord-vim")
     use("EdenEast/nightfox.nvim")
     use("rebelot/kanagawa.nvim")
     use({ "catppuccin/nvim", as = "catppuccin" })
@@ -133,8 +133,6 @@ return require("packer").startup(function(use)
 
     -- Zen mode
     use("folke/zen-mode.nvim")
-
-    -- Tabs
     use({ "akinsho/bufferline.nvim", tag = "v3.*", requires = "nvim-tree/nvim-web-devicons" })
 
     -- File Browser
@@ -183,13 +181,13 @@ return require("packer").startup(function(use)
     use("junegunn/limelight.vim")
 
     -- Screen saver
-    use({
-        "folke/drop.nvim",
-        event = "VimEnter",
-        config = function()
-            require("drop").setup()
-        end,
-    })
+    -- use({
+    --     "folke/drop.nvim",
+    --     event = "VimEnter",
+    --     config = function()
+    --         require("drop").setup()
+    --     end,
+    -- })
 
     -- Git
     use("dinhhuy258/git.nvim") -- For git blame & browse
@@ -225,4 +223,33 @@ return require("packer").startup(function(use)
 
     -- Multi line cursor
     use("mg979/vim-visual-multi")
+
+    -- neorg
+    -- use({
+    --     "nvim-neorg/neorg",
+    --     config = function()
+    --         require("neorg").setup({
+    --             load = {
+    --                 ["core.defaults"] = {}, -- Loads default behaviour
+    --                 ["core.norg.concealer"] = {}, -- Adds pretty icons to your documents
+    --                 ["core.norg.dirman"] = { -- Manages Neorg workspaces
+    --                     config = {
+    --                         workspaces = {
+    --                             notes = "~/notes",
+    --                         },
+    --                     },
+    --                 },
+    --             },
+    --         })
+    --     end,
+    --     run = ":Neorg sync-parsers",
+    --     requires = "nvim-lua/plenary.nvim",
+    -- })
+
+    -- nvim org mode
+    -- use {'nvim-orgmode/orgmode', config = function()
+    --   require('orgmode').setup_ts_grammar{}
+    -- end
+    --  }
+
 end)
