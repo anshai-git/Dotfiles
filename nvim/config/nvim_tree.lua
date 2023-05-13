@@ -2,13 +2,13 @@
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
-local function open_nvim_tree()
-  -- open the tree
-  require("nvim-tree.api").tree.open()
-end
+-- local function open_nvim_tree()
+--   -- open the tree
+--   require("nvim-tree.api").tree.open()
+-- end
 
 -- autostart nvim-tree 
-vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
+-- vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
 
 require("nvim-tree").setup { -- BEGIN_DEFAULT_OPTS
       auto_reload_on_write = true,
@@ -32,7 +32,7 @@ require("nvim-tree").setup { -- BEGIN_DEFAULT_OPTS
         centralize_selection = true,
         cursorline = true,
         debounce_delay = 15,
-        width = 40,
+        width = 80,
         hide_root_folder = false,
         side = "left",
         preserve_window_proportions = false,
