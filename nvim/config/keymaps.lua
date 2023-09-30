@@ -42,6 +42,12 @@ keymap("v", "<A-l>", ":MoveHBlock(1) <CR>", noremap_silent)
 keymap("n", "<S-Enter>", "O<ESC>", noremap_silent)
 keymap("n", "<Enter>", "o<ESC>", noremap_silent)
 
+-- Resession
+local resession = require('resession')
+keymap("n", "<leader>ss", "resession.save", noremap_silent)
+keymap("n", "<leader>sl", "resession.load", noremap_silent)
+keymap("n", "<leader>sd", "resession.delete", noremap_silent)
+
 -- Telescope
 -- local builtin = require('telescope.builtin')
 -- vim.keymap.set('n', '<leader>ff', builtin.find_files, {})

@@ -49,6 +49,9 @@ wk.register({
     },
     d = {
         name = "Dired",
-        d = { "<cmd>Dired<cr>", "Open Dired" }
+        d = { "<cmd>Dired<cr>", "Open Dired" },
+        c = { "<cmd>DiredCreate<cr>", "Create File" },
+        x = { "<cmd>DiredRemove<cr>", "Remove File"},
+        r = { "<cmd>DiredRename<cr>", "Rename File"}
     }
 }, { prefix = "<leader>" })

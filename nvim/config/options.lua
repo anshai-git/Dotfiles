@@ -59,7 +59,11 @@ for k, v in pairs(options) do
 end
 
 -- vim.cmd 'colorscheme nord'
-vim.cmd 'colorscheme catppuccin'
+-- vim.cmd 'colorscheme catppuccin'
+-- vim.cmd.colorscheme 'nordic'
+-- vim.cmd.colorscheme 'melange'
+vim.cmd.colorscheme 'melange'
+
 
 vim.api.nvim_exec(
 [[

@@ -20,8 +20,19 @@ return require("packer").startup(function(use)
     use("savq/melange-nvim")
     use("marko-cerovac/material.nvim")
     use("Mofiqul/vscode.nvim")
+    use("AlexvZyl/nordic.nvim")
+    use("blazkowolf/gruber-darker.nvim")
 
-    -- Utility lua functions use("nvim-lua/plenary.nvim")
+-- Session manager
+    require('packer').startup(function()
+        use {
+          'stevearc/resession.nvim',
+          config = function() require('resession').setup() end
+        }
+    end)
+
+    -- Utility lua functions
+    -- use("nvim-lua/plenary.nvim")
 
     -- Status line
     -- use 'itchyny/lightline.vim'
@@ -144,9 +155,6 @@ return require("packer").startup(function(use)
         tag = "nightly", -- optional, updated every week. (see issue #1193)
     })
 
-    -- vim utils
-    use("junegunn/fzf.vim")
-
     --key map utility
     use({
         "folke/which-key.nvim",
@@ -213,13 +221,13 @@ return require("packer").startup(function(use)
     use("onsails/lspkind.nvim")
 
     -- Nvim JDTLS
-    use("mfussenegger/nvim-jdtls")
+    -- use("mfussenegger/nvim-jdtls")
 
     -- Emacs like dired
-    use({
-        "X3eRo0/dired.nvim",
-        requires = "MunifTanjim/nui.nvim",
-    })
+    -- use({
+    --     "X3eRo0/dired.nvim",
+    --     requires = "MunifTanjim/nui.nvim",
+    -- })
 
     -- Multi line cursor
     use("mg979/vim-visual-multi")

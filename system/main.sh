@@ -1,3 +1,3 @@
-CONFIG_PATH="/home/anshai/Documents/self/rice/system"
+CONFIG_PATH="/home/anshai/Self/Dotfiles/system"
 
 source "${CONFIG_PATH}/variables.sh"
