@@ -14,6 +14,9 @@ return require 'packer'.startup(
         require 'plugin_config.fzf'(use)
         require 'plugin_config.lsp-zero'(use)
         require 'plugin_config.mason'(use)
+        require 'plugin_config.trouble'(use)
+        require 'plugin_config.neorg'(use)
+        require 'plugin_config.treesitter'(use)
 
         if packer_bootstrap then
             require 'packer'.sync()
