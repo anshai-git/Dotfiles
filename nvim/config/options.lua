@@ -50,4 +50,4 @@ end
 -- Other options
 vim.opt.path:append '**'
 
-vim.cmd.colorscheme 'gruber-darker'
+vim.cmd.colorscheme 'melange'

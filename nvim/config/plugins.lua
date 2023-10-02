@@ -17,6 +17,7 @@ return require 'packer'.startup(
         require 'plugin_config.trouble'(use)
         require 'plugin_config.neorg'(use)
         require 'plugin_config.treesitter'(use)
+        require 'plugin_config.autopairs'(use)
 
         if packer_bootstrap then
             require 'packer'.sync()
