@@ -18,6 +18,9 @@ return require 'packer'.startup(
         require 'plugin_config.neorg'(use)
         require 'plugin_config.treesitter'(use)
         require 'plugin_config.autopairs'(use)
+        require 'plugin_config.telescope'(use)
+        require 'plugin_config.comment'(use)
+        require 'plugin_config.todo-comment'(use)
 
         if packer_bootstrap then
             require 'packer'.sync()
