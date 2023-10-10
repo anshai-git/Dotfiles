@@ -28,15 +28,15 @@ keymap("t", "<Esc>", "<C-\\><C-N>", noremap)
 keymap("t", "<C-x>", "<cmd>q<CR>", noremap)
 keymap("n", "<leader>lf", "<cmd>lua vim.lsp.buf.format() <CR>", noremap_silent)
 
-keymap("n", "<A-j>", ":MoveLine(1) <CR>", noremap_silent)
-keymap("n", "<A-k>", ":MoveLine(-1) <CR>", noremap_silent)
+keymap("n", "<A-j>", ":MoveLine(1)   <CR>", noremap_silent)
+keymap("n", "<A-k>", ":MoveLine(-1)  <CR>", noremap_silent)
 keymap("n", "<A-h>", ":MoveHChar(-1) <CR>", noremap_silent)
-keymap("n", "<A-l>", ":MoveHChar(1) <CR>", noremap_silent)
+keymap("n", "<A-l>", ":MoveHChar(1)  <CR>", noremap_silent)
 
-keymap("v", "<A-j>", ":MoveBlock(1) <CR>", noremap_silent)
-keymap("v", "<A-k>", ":MoveBlock(-1) <CR>", noremap_silent)
-keymap("v", "<A-h>", ":MoveHBlock(-1) <CR>", noremap_silent)
-keymap("v", "<A-l>", ":MoveHBlock(1) <CR>", noremap_silent)
+keymap("v", "<A-j>", ":MoveBlock(1)   <CR>",   noremap_silent)
+keymap("v", "<A-k>", ":MoveBlock(-1)  <CR>",   noremap_silent)
+keymap("v", "<A-h>", ":MoveHBlock(-1) <CR>",   noremap_silent)
+keymap("v", "<A-l>", ":MoveHBlock(1)  <CR>",   noremap_silent)
 
 -- Append empty line
 keymap("n", "<S-Enter>", "O<ESC>", noremap_silent)
