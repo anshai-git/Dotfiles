@@ -27,6 +27,11 @@ return require 'packer'.startup(
         require 'plugin_config.rest' (use)
         require 'plugin_config.emmet' (use)
         require 'plugin_config.which-key' (use)
+        require 'plugin_config.alpha' (use)
+        require 'plugin_config.neoclip' (use)
+        require 'plugin_config.gitsigns' (use)
+        require 'plugin_config.nvim-peek' (use)
+        require 'plugin_config.cursor-illuminate' (use)
 
         if packer_bootstrap then
             require 'packer'.sync()

@@ -12,4 +12,6 @@ return function(use)
     use "Mofiqul/vscode.nvim"
     use "AlexvZyl/nordic.nvim"
     use "blazkowolf/gruber-darker.nvim"
+
+    vim.g.everforest_transparent_background = 1
 end

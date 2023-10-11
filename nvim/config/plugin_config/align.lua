@@ -12,7 +12,7 @@ return function(use)
         'x',
         'aa',
         function()
-            require'align'.align_to_char({
+            require 'align'.align_to_char({
                 length = 1,
             })
         end,
@@ -24,7 +24,7 @@ return function(use)
         'x',
         'ad',
         function()
-            require'align'.align_to_char({
+            require 'align'.align_to_char({
                 preview = true,
                 length = 2,
             })
@@ -37,7 +37,7 @@ return function(use)
         'x',
         'aw',
         function()
-            require'align'.align_to_string({
+            require 'align'.align_to_string({
                 preview = true,
                 regex = false,
             })
@@ -50,7 +50,7 @@ return function(use)
         'x',
         'ar',
         function()
-            require'align'.align_to_string({
+            require 'align'.align_to_string({
                 preview = true,
                 regex = true,
             })
@@ -63,7 +63,7 @@ return function(use)
         'n',
         'gaw',
         function()
-            local a = require'align'
+            local a = require 'align'
             a.operator(
                 a.align_to_string,
                 {
@@ -80,7 +80,7 @@ return function(use)
         'n',
         'gaa',
         function()
-            local a = require'align'
+            local a = require 'align'
             a.operator(a.align_to_char)
         end,
         NS
