@@ -27,8 +27,8 @@ local options = {
     -- cmdheight = 0,
 
     -- hidden characters
-    list = true,
-    listchars = "space:·",
+    -- list = true,
+    -- listchars = "space:·",
 
     -- smart case
     smartcase = true,
