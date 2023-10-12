@@ -50,4 +50,5 @@ end
 -- Other options
 vim.opt.path:append '**'
 
-vim.cmd.colorscheme 'everforest'
+-- vim.cmd.colorscheme 'everforest'
+vim.cmd.colorscheme 'catppuccin'
