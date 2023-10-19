@@ -25,5 +25,3 @@ vim.g.netrw_liststyle = 3
 -- 1: show not-hidden files
 -- 2: show hidden files only
 vim.g.netrw_hide = 0
-
-

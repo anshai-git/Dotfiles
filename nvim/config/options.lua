@@ -1,4 +1,7 @@
 local options = {
+    -- Titlebar (filename on top side)
+    title = true,
+
     -- highlight all matches on previous search pattern
     hlsearch = true,
 

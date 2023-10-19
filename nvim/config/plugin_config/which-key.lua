@@ -138,6 +138,7 @@ return function(use)
             t = { "<cmd>TroubleToggle<cr>", "Toggle Trouble" },
             r = { "<cmd>TroubleRefresh<cr>", "Trouble Refresh " },
             s = { "<cmd>Telescope diagnostics<cr>", "Telescope Diagnostics" }
-        }
+        },
+        w = { "<cmd>set wrap!<cr>", "Toggle Soft Wrap" }
     }, { prefix = "<space>" })
 end
