@@ -1,4 +1,18 @@
 return function(use)
+    use "ronisbr/nano-theme.nvim"
+    use "antonio-hickey/minty-melon"
+    use "nireo/focus"
+
+    use "xero/miasma.nvim"
+    use "rktjmp/lush.nvim"
+    use {
+        "mcchrish/zenbones.nvim",
+        -- Optionally install Lush. Allows for more configuration or extending the colorscheme
+        -- If you don't want to install lush, make sure to set g:zenbones_compat = 1
+        -- In Vim, compat mode is turned on as Lush only works in Neovim.
+        requires = "rktjmp/lush.nvim"
+    }
+    use "rockerBOO/boo-colorscheme-nvim"
     use "EdenEast/nightfox.nvim"
     use "rebelot/kanagawa.nvim"
     use {

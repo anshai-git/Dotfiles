@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/home/anshai/.cache/nvim/packer_hererocks/2.1.1694285958/share/lua/5.1/?.lua;/home/anshai/.cache/nvim/packer_hererocks/2.1.1694285958/share/lua/5.1/?/init.lua;/home/anshai/.cache/nvim/packer_hererocks/2.1.1694285958/lib/luarocks/rocks-5.1/?.lua;/home/anshai/.cache/nvim/packer_hererocks/2.1.1694285958/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/home/anshai/.cache/nvim/packer_hererocks/2.1.1694285958/lib/lua/5.1/?.so"
+local package_path_str = "/home/anshai/.cache/nvim/packer_hererocks/2.1.1696795921/share/lua/5.1/?.lua;/home/anshai/.cache/nvim/packer_hererocks/2.1.1696795921/share/lua/5.1/?/init.lua;/home/anshai/.cache/nvim/packer_hererocks/2.1.1696795921/lib/luarocks/rocks-5.1/?.lua;/home/anshai/.cache/nvim/packer_hererocks/2.1.1696795921/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/home/anshai/.cache/nvim/packer_hererocks/2.1.1696795921/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -75,7 +75,7 @@ time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
   ["Comment.nvim"] = {
-    config = { "\27LJ\2\nÁ\1\0\0\4\0\f\0\0156\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\0025\3\6\0=\3\a\0025\3\b\0=\3\t\0025\3\n\0=\3\v\2B\0\2\1K\0\1\0\rmappings\1\0\2\nbasic\2\nextra\2\nextra\1\0\3\nabove\bgcO\nbelow\bgco\beol\bgcA\ropleader\1\0\2\tline\agc\nblock\agb\ftoggler\1\0\2\tline\bgcc\nblock\bgbc\1\0\2\fpadding\2\vsticky\2\nsetup\fComment\frequire\0" },
+    config = { "\27LJ\2\nÁ\1\0\0\4\0\f\0\0156\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\0025\3\6\0=\3\a\0025\3\b\0=\3\t\0025\3\n\0=\3\v\2B\0\2\1K\0\1\0\rmappings\1\0\2\nbasic\2\nextra\2\nextra\1\0\3\nbelow\bgco\beol\bgcA\nabove\bgcO\ropleader\1\0\2\nblock\agb\tline\agc\ftoggler\1\0\2\nblock\bgbc\tline\bgcc\1\0\2\vsticky\2\fpadding\2\nsetup\fComment\frequire\0" },
     loaded = true,
     path = "/home/anshai/.local/share/nvim/site/pack/packer/start/Comment.nvim",
     url = "https://github.com/numToStr/Comment.nvim"
@@ -96,6 +96,11 @@ _G.packer_plugins = {
     path = "/home/anshai/.local/share/nvim/site/pack/packer/start/alpha-nvim",
     url = "https://github.com/goolord/alpha-nvim"
   },
+  ["boo-colorscheme-nvim"] = {
+    loaded = true,
+    path = "/home/anshai/.local/share/nvim/site/pack/packer/start/boo-colorscheme-nvim",
+    url = "https://github.com/rockerBOO/boo-colorscheme-nvim"
+  },
   catppuccin = {
     loaded = true,
     path = "/home/anshai/.local/share/nvim/site/pack/packer/start/catppuccin",
@@ -115,6 +120,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/anshai/.local/share/nvim/site/pack/packer/start/everforest",
     url = "https://github.com/sainnhe/everforest"
+  },
+  focus = {
+    loaded = true,
+    path = "/home/anshai/.local/share/nvim/site/pack/packer/start/focus",
+    url = "https://github.com/nireo/focus"
   },
   fzf = {
     loaded = true,
@@ -151,6 +161,11 @@ _G.packer_plugins = {
     path = "/home/anshai/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
     url = "https://github.com/VonHeikemen/lsp-zero.nvim"
   },
+  ["lush.nvim"] = {
+    loaded = true,
+    path = "/home/anshai/.local/share/nvim/site/pack/packer/start/lush.nvim",
+    url = "https://github.com/rktjmp/lush.nvim"
+  },
   ["mason.nvim"] = {
     loaded = true,
     path = "/home/anshai/.local/share/nvim/site/pack/packer/start/mason.nvim",
@@ -165,6 +180,21 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/anshai/.local/share/nvim/site/pack/packer/start/melange-nvim",
     url = "https://github.com/savq/melange-nvim"
+  },
+  ["miasma.nvim"] = {
+    loaded = true,
+    path = "/home/anshai/.local/share/nvim/site/pack/packer/start/miasma.nvim",
+    url = "https://github.com/xero/miasma.nvim"
+  },
+  ["minty-melon"] = {
+    loaded = true,
+    path = "/home/anshai/.local/share/nvim/site/pack/packer/start/minty-melon",
+    url = "https://github.com/antonio-hickey/minty-melon"
+  },
+  ["nano-theme.nvim"] = {
+    loaded = true,
+    path = "/home/anshai/.local/share/nvim/site/pack/packer/start/nano-theme.nvim",
+    url = "https://github.com/ronisbr/nano-theme.nvim"
   },
   neorg = {
     config = { "\27LJ\2\n÷\1\0\0\a\0\14\0\0196\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\f\0005\3\3\0004\4\0\0=\4\4\0034\4\0\0=\4\5\0035\4\t\0005\5\a\0005\6\6\0=\6\b\5=\5\n\4=\4\v\3=\3\r\2B\0\2\1K\0\1\0\tload\1\0\0\16core.dirman\vconfig\1\0\0\15workspaces\1\0\0\1\0\2\nnotes\17~/Self/Notes\ttest\f~/notes\19core.concealer\18core.defaults\1\0\0\nsetup\nneorg\frequire\0" },
@@ -204,7 +234,7 @@ _G.packer_plugins = {
     url = "https://github.com/neovim/nvim-lspconfig"
   },
   ["nvim-neoclip.lua"] = {
-    config = { "\27LJ\2\n‹\6\0\0\a\0\29\0'6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0006\3\4\0009\3\5\0039\3\6\3'\5\a\0B\3\2\2'\4\b\0&\3\4\3=\3\t\0025\3\n\0=\3\v\0025\3\f\0=\3\r\0025\3\14\0=\3\15\0025\3\16\0=\3\17\0025\3\24\0005\4\20\0005\5\18\0004\6\0\0=\6\19\5=\5\21\0045\5\22\0004\6\0\0=\6\19\5=\5\23\4=\4\25\0035\4\26\0004\5\0\0=\5\19\4=\4\27\3=\3\28\2B\0\2\1K\0\1\0\tkeys\bfzf\1\0\3\vselect\fdefault\npaste\vctrl-p\17paste_behind\vctrl-k\14telescope\1\0\0\6n\1\0\6\npaste\6p\vreplay\6q\tedit\6e\17paste_behind\6P\vselect\t<cr>\vdelete\6d\6i\1\0\0\vcustom\1\0\6\npaste\n<c-p>\vreplay\n<c-q>\tedit\n<c-e>\17paste_behind\n<c-k>\vselect\t<cr>\vdelete\n<c-d>\21on_custom_action\1\0\1\20close_telescope\2\14on_replay\1\0\3\18move_to_front\1\fset_reg\1\20close_telescope\2\ron_paste\1\0\3\18move_to_front\1\fset_reg\1\20close_telescope\2\14on_select\1\0\2\18move_to_front\1\20close_telescope\2\fdb_path\31/databases/neoclip.sqlite3\tdata\fstdpath\afn\bvim\1\0\n\25enable_macro_history\2\28default_register_macros\6q\21default_register\6\"\29disable_keycodes_parsing\1\20continuous_sync\1\17length_limit\3ÄÄ@\30enable_persistent_history\1\fhistory\3Ë\a\fpreview\2\24content_spec_column\1\nsetup\fneoclip\frequire\0" },
+    config = { "\27LJ\2\n‹\6\0\0\a\0\29\0'6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0006\3\4\0009\3\5\0039\3\6\3'\5\a\0B\3\2\2'\4\b\0&\3\4\3=\3\t\0025\3\n\0=\3\v\0025\3\f\0=\3\r\0025\3\14\0=\3\15\0025\3\16\0=\3\17\0025\3\24\0005\4\20\0005\5\18\0004\6\0\0=\6\19\5=\5\21\0045\5\22\0004\6\0\0=\6\19\5=\5\23\4=\4\25\0035\4\26\0004\5\0\0=\5\19\4=\4\27\3=\3\28\2B\0\2\1K\0\1\0\tkeys\bfzf\1\0\3\vselect\fdefault\npaste\vctrl-p\17paste_behind\vctrl-k\14telescope\1\0\0\6n\1\0\6\vselect\t<cr>\npaste\6p\vdelete\6d\tedit\6e\vreplay\6q\17paste_behind\6P\6i\1\0\0\vcustom\1\0\6\vselect\t<cr>\npaste\n<c-p>\vdelete\n<c-d>\tedit\n<c-e>\vreplay\n<c-q>\17paste_behind\n<c-k>\21on_custom_action\1\0\1\20close_telescope\2\14on_replay\1\0\3\fset_reg\1\20close_telescope\2\18move_to_front\1\ron_paste\1\0\3\fset_reg\1\20close_telescope\2\18move_to_front\1\14on_select\1\0\2\20close_telescope\2\18move_to_front\1\fdb_path\31/databases/neoclip.sqlite3\tdata\fstdpath\afn\bvim\1\0\n\20continuous_sync\1\17length_limit\3ÄÄ@\30enable_persistent_history\1\fhistory\3Ë\a\fpreview\2\29disable_keycodes_parsing\1\24content_spec_column\1\25enable_macro_history\2\28default_register_macros\6q\21default_register\6\"\nsetup\fneoclip\frequire\0" },
     loaded = true,
     path = "/home/anshai/.local/share/nvim/site/pack/packer/start/nvim-neoclip.lua",
     url = "https://github.com/AckslD/nvim-neoclip.lua"
@@ -242,10 +272,15 @@ _G.packer_plugins = {
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
   ["rest.nvim"] = {
-    config = { "\27LJ\2\n>\0\1\5\0\4\0\0066\1\0\0009\1\1\0019\1\2\0015\3\3\0\18\4\0\0D\1\3\0\1\5\0\0\ttidy\a-i\a-q\6-\vsystem\afn\bvimÅ\3\1\0\6\0\r\0\0176\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\0025\3\6\0005\4\a\0003\5\b\0=\5\t\4=\4\n\3=\3\v\0024\3\0\0=\3\f\2B\0\2\1K\0\1\0\29custom_dynamic_variables\vresult\15formatters\thtml\0\1\0\1\tjson\ajq\1\0\4\17show_headers\2\19show_http_info\2\22show_curl_command\1\rshow_url\2\14highlight\1\0\2\fenabled\2\ftimeout\3ñ\1\1\0\a\26skip_ssl_verification\1\26result_split_in_place\1\28result_split_horizontal\1\renv_file\t.env\20jump_to_request\1\17yank_dry_run\2\15encode_url\2\nsetup\14rest-nvim\frequire\0" },
+    config = { "\27LJ\2\n>\0\1\5\0\4\0\0066\1\0\0009\1\1\0019\1\2\0015\3\3\0\18\4\0\0D\1\3\0\1\5\0\0\ttidy\a-i\a-q\6-\vsystem\afn\bvimÅ\3\1\0\6\0\r\0\0176\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\0025\3\6\0005\4\a\0003\5\b\0=\5\t\4=\4\n\3=\3\v\0024\3\0\0=\3\f\2B\0\2\1K\0\1\0\29custom_dynamic_variables\vresult\15formatters\thtml\0\1\0\1\tjson\ajq\1\0\4\22show_curl_command\1\17show_headers\2\19show_http_info\2\rshow_url\2\14highlight\1\0\2\ftimeout\3ñ\1\fenabled\2\1\0\a\renv_file\t.env\17yank_dry_run\2\15encode_url\2\26skip_ssl_verification\1\26result_split_in_place\1\28result_split_horizontal\1\20jump_to_request\1\nsetup\14rest-nvim\frequire\0" },
     loaded = true,
     path = "/home/anshai/.local/share/nvim/site/pack/packer/start/rest.nvim",
     url = "https://github.com/rest-nvim/rest.nvim"
+  },
+  ["seoul256.vim"] = {
+    loaded = true,
+    path = "/home/anshai/.local/share/nvim/site/pack/packer/start/seoul256.vim",
+    url = "https://github.com/junegunn/seoul256.vim"
   },
   ["telescope.nvim"] = {
     loaded = true,
@@ -273,42 +308,47 @@ _G.packer_plugins = {
     url = "https://github.com/Mofiqul/vscode.nvim"
   },
   ["which-key.nvim"] = {
-    config = { "\27LJ\2\n–\a\0\0\6\0001\0=6\0\0\0009\0\1\0+\1\2\0=\1\2\0006\0\0\0009\0\1\0)\1\0\0=\1\3\0006\0\4\0'\2\5\0B\0\2\0029\0\6\0004\2\3\0005\3\f\0005\4\a\0005\5\b\0=\5\t\0045\5\n\0=\5\v\4=\4\r\0035\4\14\0=\4\15\0034\4\0\0=\4\16\0035\4\17\0=\4\18\0035\4\19\0=\4\20\0035\4\21\0=\4\22\0035\4\23\0005\5\24\0=\5\25\0045\5\26\0=\5\27\4=\4\28\0035\4\30\0005\5\29\0=\5\31\0045\5 \0=\5!\4=\4\"\0035\4#\0=\4$\0035\4%\0=\4&\0035\4(\0005\5'\0=\5)\0045\5*\0=\5+\4=\4,\0035\4-\0004\5\0\0=\5.\0044\5\0\0=\5/\4=\0040\3>\3\1\2B\0\2\1K\0\1\0\fdisable\14filetypes\rbuftypes\1\0\0\23triggers_blacklist\6v\1\3\0\0\6j\6k\6i\1\0\0\1\3\0\0\6j\6k\20triggers_nowait\1\b\0\0\6`\6'\ag`\ag'\6\"\n<c-r>\az=\vhidden\1\t\0\0\r<silent>\n<cmd>\n<Cmd>\t<CR>\a^:\a^ \v^call \n^lua \vlayout\nwidth\1\0\2\bmin\3\20\bmax\0032\vheight\1\0\2\fspacing\3\3\nalign\tleft\1\0\2\bmin\3\4\bmax\3\25\vwindow\fpadding\1\5\0\0\3\1\3\2\3\1\3\2\vmargin\1\5\0\0\3\1\3\0\3\1\3\0\1\0\4\rwinblend\3\0\rposition\vbottom\vzindex\3Ë\a\vborder\tnone\19popup_mappings\1\0\2\14scroll_up\n<c-u>\16scroll_down\n<c-d>\nicons\1\0\3\14separator\b‚ûú\ngroup\6+\15breadcrumb\a¬ª\fmotions\1\0\1\ncount\2\15key_labels\14operators\1\0\1\agc\rComments\fplugins\1\0\4\14show_keys\2\14show_help\2\rtriggers\tauto\19ignore_missing\1\fpresets\1\0\a\17text_objects\2\fmotions\2\14operators\2\6g\2\fwindows\2\6z\2\bnav\2\rspelling\1\0\2\fenabled\2\16suggestions\3\20\1\0\2\14registers\2\nmarks\2\nsetup\14which-key\frequire\15timeoutlen\ftimeout\6o\bvim\0" },
+    config = { "\27LJ\2\n–\a\0\0\6\0001\0=6\0\0\0009\0\1\0+\1\2\0=\1\2\0006\0\0\0009\0\1\0)\1\0\0=\1\3\0006\0\4\0'\2\5\0B\0\2\0029\0\6\0004\2\3\0005\3\f\0005\4\a\0005\5\b\0=\5\t\0045\5\n\0=\5\v\4=\4\r\0035\4\14\0=\4\15\0034\4\0\0=\4\16\0035\4\17\0=\4\18\0035\4\19\0=\4\20\0035\4\21\0=\4\22\0035\4\23\0005\5\24\0=\5\25\0045\5\26\0=\5\27\4=\4\28\0035\4\30\0005\5\29\0=\5\31\0045\5 \0=\5!\4=\4\"\0035\4#\0=\4$\0035\4%\0=\4&\0035\4(\0005\5'\0=\5)\0045\5*\0=\5+\4=\4,\0035\4-\0004\5\0\0=\5.\0044\5\0\0=\5/\4=\0040\3>\3\1\2B\0\2\1K\0\1\0\fdisable\14filetypes\rbuftypes\1\0\0\23triggers_blacklist\6v\1\3\0\0\6j\6k\6i\1\0\0\1\3\0\0\6j\6k\20triggers_nowait\1\b\0\0\6`\6'\ag`\ag'\6\"\n<c-r>\az=\vhidden\1\t\0\0\r<silent>\n<cmd>\n<Cmd>\t<CR>\a^:\a^ \v^call \n^lua \vlayout\nwidth\1\0\2\bmin\3\20\bmax\0032\vheight\1\0\2\nalign\tleft\fspacing\3\3\1\0\2\bmin\3\4\bmax\3\25\vwindow\fpadding\1\5\0\0\3\1\3\2\3\1\3\2\vmargin\1\5\0\0\3\1\3\0\3\1\3\0\1\0\4\vborder\tnone\rposition\vbottom\rwinblend\3\0\vzindex\3Ë\a\19popup_mappings\1\0\2\16scroll_down\n<c-d>\14scroll_up\n<c-u>\nicons\1\0\3\15breadcrumb\a¬ª\ngroup\6+\14separator\b‚ûú\fmotions\1\0\1\ncount\2\15key_labels\14operators\1\0\1\agc\rComments\fplugins\1\0\4\rtriggers\tauto\14show_help\2\14show_keys\2\19ignore_missing\1\fpresets\1\0\a\6z\2\fwindows\2\14operators\2\bnav\2\17text_objects\2\fmotions\2\6g\2\rspelling\1\0\2\16suggestions\3\20\fenabled\2\1\0\2\14registers\2\nmarks\2\nsetup\14which-key\frequire\15timeoutlen\ftimeout\6o\bvim\0" },
     loaded = true,
     path = "/home/anshai/.local/share/nvim/site/pack/packer/start/which-key.nvim",
     url = "https://github.com/folke/which-key.nvim"
+  },
+  ["zenbones.nvim"] = {
+    loaded = true,
+    path = "/home/anshai/.local/share/nvim/site/pack/packer/start/zenbones.nvim",
+    url = "https://github.com/mcchrish/zenbones.nvim"
   }
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: nvim-neoclip.lua
-time([[Config for nvim-neoclip.lua]], true)
-try_loadstring("\27LJ\2\n‹\6\0\0\a\0\29\0'6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0006\3\4\0009\3\5\0039\3\6\3'\5\a\0B\3\2\2'\4\b\0&\3\4\3=\3\t\0025\3\n\0=\3\v\0025\3\f\0=\3\r\0025\3\14\0=\3\15\0025\3\16\0=\3\17\0025\3\24\0005\4\20\0005\5\18\0004\6\0\0=\6\19\5=\5\21\0045\5\22\0004\6\0\0=\6\19\5=\5\23\4=\4\25\0035\4\26\0004\5\0\0=\5\19\4=\4\27\3=\3\28\2B\0\2\1K\0\1\0\tkeys\bfzf\1\0\3\vselect\fdefault\npaste\vctrl-p\17paste_behind\vctrl-k\14telescope\1\0\0\6n\1\0\6\npaste\6p\vreplay\6q\tedit\6e\17paste_behind\6P\vselect\t<cr>\vdelete\6d\6i\1\0\0\vcustom\1\0\6\npaste\n<c-p>\vreplay\n<c-q>\tedit\n<c-e>\17paste_behind\n<c-k>\vselect\t<cr>\vdelete\n<c-d>\21on_custom_action\1\0\1\20close_telescope\2\14on_replay\1\0\3\18move_to_front\1\fset_reg\1\20close_telescope\2\ron_paste\1\0\3\18move_to_front\1\fset_reg\1\20close_telescope\2\14on_select\1\0\2\18move_to_front\1\20close_telescope\2\fdb_path\31/databases/neoclip.sqlite3\tdata\fstdpath\afn\bvim\1\0\n\25enable_macro_history\2\28default_register_macros\6q\21default_register\6\"\29disable_keycodes_parsing\1\20continuous_sync\1\17length_limit\3ÄÄ@\30enable_persistent_history\1\fhistory\3Ë\a\fpreview\2\24content_spec_column\1\nsetup\fneoclip\frequire\0", "config", "nvim-neoclip.lua")
-time([[Config for nvim-neoclip.lua]], false)
--- Config for: which-key.nvim
-time([[Config for which-key.nvim]], true)
-try_loadstring("\27LJ\2\n–\a\0\0\6\0001\0=6\0\0\0009\0\1\0+\1\2\0=\1\2\0006\0\0\0009\0\1\0)\1\0\0=\1\3\0006\0\4\0'\2\5\0B\0\2\0029\0\6\0004\2\3\0005\3\f\0005\4\a\0005\5\b\0=\5\t\0045\5\n\0=\5\v\4=\4\r\0035\4\14\0=\4\15\0034\4\0\0=\4\16\0035\4\17\0=\4\18\0035\4\19\0=\4\20\0035\4\21\0=\4\22\0035\4\23\0005\5\24\0=\5\25\0045\5\26\0=\5\27\4=\4\28\0035\4\30\0005\5\29\0=\5\31\0045\5 \0=\5!\4=\4\"\0035\4#\0=\4$\0035\4%\0=\4&\0035\4(\0005\5'\0=\5)\0045\5*\0=\5+\4=\4,\0035\4-\0004\5\0\0=\5.\0044\5\0\0=\5/\4=\0040\3>\3\1\2B\0\2\1K\0\1\0\fdisable\14filetypes\rbuftypes\1\0\0\23triggers_blacklist\6v\1\3\0\0\6j\6k\6i\1\0\0\1\3\0\0\6j\6k\20triggers_nowait\1\b\0\0\6`\6'\ag`\ag'\6\"\n<c-r>\az=\vhidden\1\t\0\0\r<silent>\n<cmd>\n<Cmd>\t<CR>\a^:\a^ \v^call \n^lua \vlayout\nwidth\1\0\2\bmin\3\20\bmax\0032\vheight\1\0\2\fspacing\3\3\nalign\tleft\1\0\2\bmin\3\4\bmax\3\25\vwindow\fpadding\1\5\0\0\3\1\3\2\3\1\3\2\vmargin\1\5\0\0\3\1\3\0\3\1\3\0\1\0\4\rwinblend\3\0\rposition\vbottom\vzindex\3Ë\a\vborder\tnone\19popup_mappings\1\0\2\14scroll_up\n<c-u>\16scroll_down\n<c-d>\nicons\1\0\3\14separator\b‚ûú\ngroup\6+\15breadcrumb\a¬ª\fmotions\1\0\1\ncount\2\15key_labels\14operators\1\0\1\agc\rComments\fplugins\1\0\4\14show_keys\2\14show_help\2\rtriggers\tauto\19ignore_missing\1\fpresets\1\0\a\17text_objects\2\fmotions\2\14operators\2\6g\2\fwindows\2\6z\2\bnav\2\rspelling\1\0\2\fenabled\2\16suggestions\3\20\1\0\2\14registers\2\nmarks\2\nsetup\14which-key\frequire\15timeoutlen\ftimeout\6o\bvim\0", "config", "which-key.nvim")
-time([[Config for which-key.nvim]], false)
--- Config for: neorg
-time([[Config for neorg]], true)
-try_loadstring("\27LJ\2\n÷\1\0\0\a\0\14\0\0196\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\f\0005\3\3\0004\4\0\0=\4\4\0034\4\0\0=\4\5\0035\4\t\0005\5\a\0005\6\6\0=\6\b\5=\5\n\4=\4\v\3=\3\r\2B\0\2\1K\0\1\0\tload\1\0\0\16core.dirman\vconfig\1\0\0\15workspaces\1\0\0\1\0\2\nnotes\17~/Self/Notes\ttest\f~/notes\19core.concealer\18core.defaults\1\0\0\nsetup\nneorg\frequire\0", "config", "neorg")
-time([[Config for neorg]], false)
--- Config for: nvim-autopairs
-time([[Config for nvim-autopairs]], true)
-try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0", "config", "nvim-autopairs")
-time([[Config for nvim-autopairs]], false)
--- Config for: Comment.nvim
-time([[Config for Comment.nvim]], true)
-try_loadstring("\27LJ\2\nÁ\1\0\0\4\0\f\0\0156\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\0025\3\6\0=\3\a\0025\3\b\0=\3\t\0025\3\n\0=\3\v\2B\0\2\1K\0\1\0\rmappings\1\0\2\nbasic\2\nextra\2\nextra\1\0\3\nabove\bgcO\nbelow\bgco\beol\bgcA\ropleader\1\0\2\tline\agc\nblock\agb\ftoggler\1\0\2\tline\bgcc\nblock\bgbc\1\0\2\fpadding\2\vsticky\2\nsetup\fComment\frequire\0", "config", "Comment.nvim")
-time([[Config for Comment.nvim]], false)
 -- Config for: rest.nvim
 time([[Config for rest.nvim]], true)
-try_loadstring("\27LJ\2\n>\0\1\5\0\4\0\0066\1\0\0009\1\1\0019\1\2\0015\3\3\0\18\4\0\0D\1\3\0\1\5\0\0\ttidy\a-i\a-q\6-\vsystem\afn\bvimÅ\3\1\0\6\0\r\0\0176\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\0025\3\6\0005\4\a\0003\5\b\0=\5\t\4=\4\n\3=\3\v\0024\3\0\0=\3\f\2B\0\2\1K\0\1\0\29custom_dynamic_variables\vresult\15formatters\thtml\0\1\0\1\tjson\ajq\1\0\4\17show_headers\2\19show_http_info\2\22show_curl_command\1\rshow_url\2\14highlight\1\0\2\fenabled\2\ftimeout\3ñ\1\1\0\a\26skip_ssl_verification\1\26result_split_in_place\1\28result_split_horizontal\1\renv_file\t.env\20jump_to_request\1\17yank_dry_run\2\15encode_url\2\nsetup\14rest-nvim\frequire\0", "config", "rest.nvim")
+try_loadstring("\27LJ\2\n>\0\1\5\0\4\0\0066\1\0\0009\1\1\0019\1\2\0015\3\3\0\18\4\0\0D\1\3\0\1\5\0\0\ttidy\a-i\a-q\6-\vsystem\afn\bvimÅ\3\1\0\6\0\r\0\0176\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\0025\3\6\0005\4\a\0003\5\b\0=\5\t\4=\4\n\3=\3\v\0024\3\0\0=\3\f\2B\0\2\1K\0\1\0\29custom_dynamic_variables\vresult\15formatters\thtml\0\1\0\1\tjson\ajq\1\0\4\22show_curl_command\1\17show_headers\2\19show_http_info\2\rshow_url\2\14highlight\1\0\2\ftimeout\3ñ\1\fenabled\2\1\0\a\renv_file\t.env\17yank_dry_run\2\15encode_url\2\26skip_ssl_verification\1\26result_split_in_place\1\28result_split_horizontal\1\20jump_to_request\1\nsetup\14rest-nvim\frequire\0", "config", "rest.nvim")
 time([[Config for rest.nvim]], false)
 -- Config for: alpha-nvim
 time([[Config for alpha-nvim]], true)
 try_loadstring("\27LJ\2\n`\0\0\5\0\5\0\n6\0\0\0'\2\1\0B\0\2\0029\0\2\0006\2\0\0'\4\3\0B\2\2\0029\2\4\2B\0\2\1K\0\1\0\vconfig\26alpha.themes.startify\nsetup\nalpha\frequire\0", "config", "alpha-nvim")
 time([[Config for alpha-nvim]], false)
+-- Config for: nvim-autopairs
+time([[Config for nvim-autopairs]], true)
+try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0", "config", "nvim-autopairs")
+time([[Config for nvim-autopairs]], false)
+-- Config for: neorg
+time([[Config for neorg]], true)
+try_loadstring("\27LJ\2\n÷\1\0\0\a\0\14\0\0196\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\f\0005\3\3\0004\4\0\0=\4\4\0034\4\0\0=\4\5\0035\4\t\0005\5\a\0005\6\6\0=\6\b\5=\5\n\4=\4\v\3=\3\r\2B\0\2\1K\0\1\0\tload\1\0\0\16core.dirman\vconfig\1\0\0\15workspaces\1\0\0\1\0\2\nnotes\17~/Self/Notes\ttest\f~/notes\19core.concealer\18core.defaults\1\0\0\nsetup\nneorg\frequire\0", "config", "neorg")
+time([[Config for neorg]], false)
+-- Config for: nvim-neoclip.lua
+time([[Config for nvim-neoclip.lua]], true)
+try_loadstring("\27LJ\2\n‹\6\0\0\a\0\29\0'6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0006\3\4\0009\3\5\0039\3\6\3'\5\a\0B\3\2\2'\4\b\0&\3\4\3=\3\t\0025\3\n\0=\3\v\0025\3\f\0=\3\r\0025\3\14\0=\3\15\0025\3\16\0=\3\17\0025\3\24\0005\4\20\0005\5\18\0004\6\0\0=\6\19\5=\5\21\0045\5\22\0004\6\0\0=\6\19\5=\5\23\4=\4\25\0035\4\26\0004\5\0\0=\5\19\4=\4\27\3=\3\28\2B\0\2\1K\0\1\0\tkeys\bfzf\1\0\3\vselect\fdefault\npaste\vctrl-p\17paste_behind\vctrl-k\14telescope\1\0\0\6n\1\0\6\vselect\t<cr>\npaste\6p\vdelete\6d\tedit\6e\vreplay\6q\17paste_behind\6P\6i\1\0\0\vcustom\1\0\6\vselect\t<cr>\npaste\n<c-p>\vdelete\n<c-d>\tedit\n<c-e>\vreplay\n<c-q>\17paste_behind\n<c-k>\21on_custom_action\1\0\1\20close_telescope\2\14on_replay\1\0\3\fset_reg\1\20close_telescope\2\18move_to_front\1\ron_paste\1\0\3\fset_reg\1\20close_telescope\2\18move_to_front\1\14on_select\1\0\2\20close_telescope\2\18move_to_front\1\fdb_path\31/databases/neoclip.sqlite3\tdata\fstdpath\afn\bvim\1\0\n\20continuous_sync\1\17length_limit\3ÄÄ@\30enable_persistent_history\1\fhistory\3Ë\a\fpreview\2\29disable_keycodes_parsing\1\24content_spec_column\1\25enable_macro_history\2\28default_register_macros\6q\21default_register\6\"\nsetup\fneoclip\frequire\0", "config", "nvim-neoclip.lua")
+time([[Config for nvim-neoclip.lua]], false)
+-- Config for: which-key.nvim
+time([[Config for which-key.nvim]], true)
+try_loadstring("\27LJ\2\n–\a\0\0\6\0001\0=6\0\0\0009\0\1\0+\1\2\0=\1\2\0006\0\0\0009\0\1\0)\1\0\0=\1\3\0006\0\4\0'\2\5\0B\0\2\0029\0\6\0004\2\3\0005\3\f\0005\4\a\0005\5\b\0=\5\t\0045\5\n\0=\5\v\4=\4\r\0035\4\14\0=\4\15\0034\4\0\0=\4\16\0035\4\17\0=\4\18\0035\4\19\0=\4\20\0035\4\21\0=\4\22\0035\4\23\0005\5\24\0=\5\25\0045\5\26\0=\5\27\4=\4\28\0035\4\30\0005\5\29\0=\5\31\0045\5 \0=\5!\4=\4\"\0035\4#\0=\4$\0035\4%\0=\4&\0035\4(\0005\5'\0=\5)\0045\5*\0=\5+\4=\4,\0035\4-\0004\5\0\0=\5.\0044\5\0\0=\5/\4=\0040\3>\3\1\2B\0\2\1K\0\1\0\fdisable\14filetypes\rbuftypes\1\0\0\23triggers_blacklist\6v\1\3\0\0\6j\6k\6i\1\0\0\1\3\0\0\6j\6k\20triggers_nowait\1\b\0\0\6`\6'\ag`\ag'\6\"\n<c-r>\az=\vhidden\1\t\0\0\r<silent>\n<cmd>\n<Cmd>\t<CR>\a^:\a^ \v^call \n^lua \vlayout\nwidth\1\0\2\bmin\3\20\bmax\0032\vheight\1\0\2\nalign\tleft\fspacing\3\3\1\0\2\bmin\3\4\bmax\3\25\vwindow\fpadding\1\5\0\0\3\1\3\2\3\1\3\2\vmargin\1\5\0\0\3\1\3\0\3\1\3\0\1\0\4\vborder\tnone\rposition\vbottom\rwinblend\3\0\vzindex\3Ë\a\19popup_mappings\1\0\2\16scroll_down\n<c-d>\14scroll_up\n<c-u>\nicons\1\0\3\15breadcrumb\a¬ª\ngroup\6+\14separator\b‚ûú\fmotions\1\0\1\ncount\2\15key_labels\14operators\1\0\1\agc\rComments\fplugins\1\0\4\rtriggers\tauto\14show_help\2\14show_keys\2\19ignore_missing\1\fpresets\1\0\a\6z\2\fwindows\2\14operators\2\bnav\2\17text_objects\2\fmotions\2\6g\2\rspelling\1\0\2\16suggestions\3\20\fenabled\2\1\0\2\14registers\2\nmarks\2\nsetup\14which-key\frequire\15timeoutlen\ftimeout\6o\bvim\0", "config", "which-key.nvim")
+time([[Config for which-key.nvim]], false)
+-- Config for: Comment.nvim
+time([[Config for Comment.nvim]], true)
+try_loadstring("\27LJ\2\nÁ\1\0\0\4\0\f\0\0156\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\0025\3\6\0=\3\a\0025\3\b\0=\3\t\0025\3\n\0=\3\v\2B\0\2\1K\0\1\0\rmappings\1\0\2\nbasic\2\nextra\2\nextra\1\0\3\nbelow\bgco\beol\bgcA\nabove\bgcO\ropleader\1\0\2\nblock\agb\tline\agc\ftoggler\1\0\2\nblock\bgbc\tline\bgcc\1\0\2\vsticky\2\fpadding\2\nsetup\fComment\frequire\0", "config", "Comment.nvim")
+time([[Config for Comment.nvim]], false)
 -- Load plugins in order defined by `after`
 time([[Sequenced loading]], true)
 vim.cmd [[ packadd nvim-treesitter ]]

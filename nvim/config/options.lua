@@ -44,6 +44,9 @@ local options = {
 
     -- wildmenu
     -- wildmenu = true,
+
+    -- Scroll offset
+    so = 10
 }
 
 for k, v in pairs(options) do
@@ -53,5 +56,6 @@ end
 -- Other options
 vim.opt.path:append '**'
 
--- vim.cmd.colorscheme 'everforest'
-vim.cmd.colorscheme 'catppuccin'
+-- vim.cmd.colorscheme 'catppuccin'
+-- vim.cmd.colorscheme 'radioactive_waste'
+vim.cmd.colorscheme 'miasma'
