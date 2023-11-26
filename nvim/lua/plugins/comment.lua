@@ -1,5 +1,4 @@
-return function(use)
-    use {
+return  {
         'numToStr/Comment.nvim',
         config = function()
             require('Comment').setup({
@@ -55,4 +54,3 @@ return function(use)
             })
         end
     }
-end

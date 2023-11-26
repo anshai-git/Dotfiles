@@ -1,8 +1,7 @@
-return function(use)
-    use 'RRethy/vim-illuminate'
-
-    -- default configuration
-    require('illuminate').configure({
+return {
+	"RRethy/vim-illuminate",
+	config = function()
+		require('illuminate').configure({
         -- providers: provider used to get references in the buffer, ordered by priority
         providers = {
             'lsp',
@@ -56,4 +55,5 @@ return function(use)
         -- case_insensitive_regex: sets regex case sensitivity
         case_insensitive_regex = false,
     })
-end
+    end
+}
