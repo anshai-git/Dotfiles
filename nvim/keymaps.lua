@@ -73,3 +73,6 @@ vim.keymap.set('n', '<leader>fg', "<cmd>lua live_grep_in_project_root() <CR>", {
 vim.keymap.set('n', '<leader>fr', builtin.oldfiles, {})
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+
+-- Neogit
+vim.keymap.set('n', '<leader>gg', "<cmd> Neogit kind=split <CR>", noremap_silent)
