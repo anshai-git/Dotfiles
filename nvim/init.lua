@@ -24,12 +24,14 @@ vim.api.nvim_exec([[
 
 require 'lazy'.setup 'plugins'
 
-require 'lsp_cfg'
-require 'netrw'
 require 'which_key_bindings'
+require 'cmp_setup'
+require 'lsp_cfg'
+require 'neogit_cfg'
+
+require 'netrw'
 require 'options'
 require 'keymaps'
-require 'cmp_setup'
 
 require 'leap'.add_default_mappings()
 require 'overseer' .setup()
