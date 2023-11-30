@@ -28,6 +28,7 @@ require 'which_key_bindings'
 require 'cmp_setup'
 require 'lsp_cfg'
 require 'neogit_cfg'
+require 'gitsigns_cfg'
 
 require 'netrw'
 require 'options'

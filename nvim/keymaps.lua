@@ -5,7 +5,7 @@ local silent = { silent = true }
 
 -- sohrter function name
 local keymap = vim.api.nvim_set_keymap
-
+ 
 -- remap leader key
 keymap("", "<Space>", "<Nop>", noremap_silent)
 vim.g.mapleader = " "
@@ -34,7 +34,19 @@ function live_grep_in_project_root(opts)
   require 'telescope.builtin'.live_grep(opts)
 end
 
-keymap("n", "<leader>h", "<cmd>split<CR>", noremap_silent)
+-- replace word
+keymap('n', '<leader>x', "*``cgn", noremap_silent)
+keymap('n', '<leader>X', "#``cgN", noremap_silent)
+
+-- Window movement
+keymap('n', '<C-j>', '<C-w>j', noremap)
+keymap('n', '<C-k>', '<C-w>k', noremap)
+keymap('n', '<C-h>', '<C-w>h', noremap)
+keymap('n', '<C-l>', '<C-w>l', noremap)
+
+-- Jumplist
+keymap('n', '<Left>', '<C-o>', noremap)
+keymap('n', '<Right>', '<C-i>', noremap)
 
 -- built-in terminal
 keymap("n", "<leader>t", "<cmd>split<CR> <cmd>term<CR>i", noremap_silent)
@@ -68,11 +80,20 @@ keymap("n", "<leader>sd", "resession.delete", noremap_silent)
 
 -- Telescope plugin mappings
 local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<leader>ff', "<cmd>lua find_files_in_project_root() <CR>", {})
-vim.keymap.set('n', '<leader>fg', "<cmd>lua live_grep_in_project_root() <CR>", {})
-vim.keymap.set('n', '<leader>fr', builtin.oldfiles, {})
-vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
-vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+keymap('n', '<leader>ff', "<cmd>lua find_files_in_project_root() <CR>", {})
+keymap('n', '<leader>fg', "<cmd>lua live_grep_in_project_root() <CR>", {})
+keymap('n', '<leader>fr', "<cmd>Telescope oldfiles <CR>", {})
+keymap('n', '<leader>fb', "<cmd>Telescope buffers <CR>", {})
+keymap('n', '<leader>fh', "<cmd>Telescope help_tags <CR>", {})
 
 -- Neogit
-vim.keymap.set('n', '<leader>gg', "<cmd> Neogit kind=split <CR>", noremap_silent)
+keymap('n', '<leader>gg', "<cmd> Neogit kind=split <CR>", noremap_silent)
+
+-- Toggle line wrap
+keymap('n', '<leader>ww', "<cmd>set wrap! <CR>", noremap_silent)
+
+-- Gitsigns
+keymap('n', '<Up>',       '<cmd>Gitsigns prev_hunk <CR>', noremap_silent)
+keymap('n', '<Down>',     '<cmd>Gitsigns next_hunk <CR>', noremap_silent)
+keymap('n', '<leader>gh', '<cmd>Gitsigns toggle_linehl <CR>', noremap_silent)
+keymap('n', '<leader>gd', '<cmd>Gitsigns toggle_deleted <CR>', noremap_silent)
