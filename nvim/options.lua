@@ -27,11 +27,11 @@ local options = {
   relativenumber = true,
 
   -- more space in the neovim command line for displaying messages
-  -- cmdheight = 0,
+  cmdheight = 0,
 
   -- hidden characters
-  -- list = true,
-  -- listchars = "space:·",
+  list = true,
+  listchars = "space:·",
 
   -- smart case
   smartcase = true,
@@ -40,20 +40,21 @@ local options = {
   termguicolors = true,
 
   -- faster completion (4000ms default)
-  updatetime = 300,
+  updatetime = 1,
 
   -- wildmenu
   -- wildmenu = true,
 
   -- Scroll offset
-  so = 10
+  so = 5
 }
+
 
 for k, v in pairs(options) do
   vim.opt[k] = v
 end
 
 -- Other options
+vim.g.user_emmet_leader_key = '<C-e>'
 vim.opt.path:append '**'
-
-vim.cmd.colorscheme 'tairiki'
+vim.cmd.colorscheme 'everforest'

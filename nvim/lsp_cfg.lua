@@ -12,7 +12,7 @@ lspconfig.cssls.setup({})
 lspconfig.angularls.setup({})
 lspconfig.jdtls.setup({})
 lspconfig.clangd.setup({})
-
+lspconfig.rust_analyzer.setup({})
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {

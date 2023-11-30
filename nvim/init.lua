@@ -1,8 +1,6 @@
 -- Install lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-
-print(lazypath)
-
+vim.opt.rtp:prepend(lazypath)
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
     "git",
@@ -13,24 +11,25 @@ if not vim.loop.fs_stat(lazypath) then
     lazypath,
   })
 end
-vim.opt.rtp:prepend(lazypath)
 
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
+vim.cmd("highlight! link SignColumn LineN");
+vim.api.nvim_exec([[
+  augroup QuickfixMappings
+    autocmd!
+    autocmd BufReadPost quickfix nnoremap <buffer> <CR> <CR>
+  augroup END
+]], true)
 
-require("lazy").setup("plugins")
+require 'lazy'.setup 'plugins'
 
--- Use this to find files in the root of a git project
-function fdf_in_root(opts)
-  opts = opts or {}
-  opts.cwd = vim.fn.systemlist("git rev-parse --show-toplevel")[1]
-  require'telescope.builtin'.find_files(opts)
-end
-
+require 'lsp_cfg'
 require 'netrw'
 require 'which_key_bindings'
-require 'lsp'
 require 'options'
 require 'keymaps'
+require 'cmp_setup'
 
-vim.cmd("highlight! link SignColumn LineN");
+require 'leap'.add_default_mappings()
+require 'overseer' .setup()

@@ -1,0 +1,3 @@
+return {
+  "namrabtw/rusty.nvim"
+}
