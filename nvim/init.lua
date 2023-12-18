@@ -24,7 +24,8 @@ vim.api.nvim_exec([[
 
 require 'lazy'.setup 'plugins'
 
-require 'which_key_bindings'
+-- require 'which_key_bindings'
+-- require 'overseer' .setup()
 require 'cmp_setup'
 require 'lsp_cfg'
 require 'neogit_cfg'
@@ -35,4 +36,3 @@ require 'options'
 require 'keymaps'
 
 require 'leap'.add_default_mappings()
-require 'overseer' .setup()

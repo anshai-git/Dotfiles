@@ -57,4 +57,4 @@ end
 -- Other options
 vim.g.user_emmet_leader_key = '<C-e>'
 vim.opt.path:append '**'
-vim.cmd.colorscheme 'everforest'
+vim.cmd.colorscheme 'default'

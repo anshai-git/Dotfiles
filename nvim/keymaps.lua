@@ -97,3 +97,9 @@ keymap('n', '<Up>',       '<cmd>Gitsigns prev_hunk <CR>', noremap_silent)
 keymap('n', '<Down>',     '<cmd>Gitsigns next_hunk <CR>', noremap_silent)
 keymap('n', '<leader>gh', '<cmd>Gitsigns toggle_linehl <CR>', noremap_silent)
 keymap('n', '<leader>gd', '<cmd>Gitsigns toggle_deleted <CR>', noremap_silent)
+
+-- Oil
+keymap('n', '<leader>dd', '<cmd>Oil <CR>', noremap_silent)
+
+-- Trouble
+keymap('n', '<leader>tt', '<cmd>TroubleToggle <CR>', noremap_silent)

@@ -1,0 +1,3 @@
+return {
+  'mikesmithgh/gruvsquirrel.nvim'
+}
