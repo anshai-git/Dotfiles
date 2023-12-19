@@ -34,6 +34,27 @@ function live_grep_in_project_root(opts)
   require 'telescope.builtin'.live_grep(opts)
 end
 
+-- This method will open the cmd with some pre-populated command wating to complete it
+-- The output of the command will be openet in a scratch buffer
+function cargo_run()
+  local pre_populated = 'cargo run -q --'
+  local command = vim.fn.input('Command: ', pre_populated)
+
+  local command_output = vim.fn.systemlist(command)
+
+  vim.cmd("botright new | horizontal resize 15")
+  vim.api.nvim_buf_set_option(0, 'buftype', 'nofile')
+  vim.api.nvim_buf_set_option(0, 'bufhidden', 'wipe')
+  vim.api.nvim_buf_set_option(0, 'buflisted', false)
+  vim.api.nvim_buf_set_option(0, 'swapfile', false)
+
+  vim.api.nvim_buf_set_lines(0, 0, -1, false, command_output)
+
+  vim.api.nvim_buf_set_option(0, 'modifiable', false)
+end
+
+keymap('n','<leader>cr', '[[:lua cargo_run()<CR>', noremap_silent)
+
 -- replace word
 keymap('n', '<leader>x', "*``cgn", noremap_silent)
 keymap('n', '<leader>X', "#``cgN", noremap_silent)
