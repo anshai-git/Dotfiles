@@ -5,7 +5,7 @@ local silent = { silent = true }
 
 -- sohrter function name
 local keymap = vim.api.nvim_set_keymap
- 
+
 -- remap leader key
 keymap("", "<Space>", "<Nop>", noremap_silent)
 vim.g.mapleader = " "
@@ -34,13 +34,12 @@ function live_grep_in_project_root(opts)
   require 'telescope.builtin'.live_grep(opts)
 end
 
--- This method will open the cmd with some pre-populated command wating to complete it
--- The output of the command will be openet in a scratch buffer
 function cargo_run()
   local pre_populated = 'cargo run -q --'
   local command = vim.fn.input('Command: ', pre_populated)
 
-  local command_output = vim.fn.systemlist(command)
+   -- Create a new scratch buffer
+  local buffer_id = vim.api.nvim_create_buf(true, true)
 
   vim.cmd("botright new | horizontal resize 15")
   vim.api.nvim_buf_set_option(0, 'buftype', 'nofile')
@@ -48,12 +47,30 @@ function cargo_run()
   vim.api.nvim_buf_set_option(0, 'buflisted', false)
   vim.api.nvim_buf_set_option(0, 'swapfile', false)
 
-  vim.api.nvim_buf_set_lines(0, 0, -1, false, command_output)
-
-  vim.api.nvim_buf_set_option(0, 'modifiable', false)
+  -- Open a job to run the command asynchronously
+  local job_id = vim.system({ 'cargo', 'build' }, {
+    text = true,
+    stdout = function(_, data)
+      -- Callback for stdout output
+      vim.schedule(function()
+        -- Switch to the scratch buffer
+        vim.api.nvim_set_current_buf(buffer_id)
+        vim.api.nvim_buf_set_lines(0, -1, -1, false, vim.fn.split(data, '\n'))
+        vim.api.nvim_set_current_buf(0)
+      end)
+    end,
+    stderr = function(_, data)
+      -- Callback for stdout output
+      vim.schedule(function()
+        vim.api.nvim_set_current_buf(buffer_id)
+        vim.api.nvim_buf_set_lines(0, -1, -1, false, vim.fn.split(data, '\n'))
+        vim.api.nvim_set_current_buf(0)
+      end)
+    end,
+  }, on_exit)
 end
 
-keymap('n','<leader>cr', '[[:lua cargo_run()<CR>', noremap_silent)
+keymap('n', '<leader>cr', '<cmd>lua cargo_run()<CR>', noremap_silent)
 
 -- replace word
 keymap('n', '<leader>x', "*``cgn", noremap_silent)
@@ -114,8 +131,8 @@ keymap('n', '<leader>gg', "<cmd> Neogit kind=split <CR>", noremap_silent)
 keymap('n', '<leader>ww', "<cmd>set wrap! <CR>", noremap_silent)
 
 -- Gitsigns
-keymap('n', '<Up>',       '<cmd>Gitsigns prev_hunk <CR>', noremap_silent)
-keymap('n', '<Down>',     '<cmd>Gitsigns next_hunk <CR>', noremap_silent)
+keymap('n', '<Up>', '<cmd>Gitsigns prev_hunk <CR>', noremap_silent)
+keymap('n', '<Down>', '<cmd>Gitsigns next_hunk <CR>', noremap_silent)
 keymap('n', '<leader>gh', '<cmd>Gitsigns toggle_linehl <CR>', noremap_silent)
 keymap('n', '<leader>gd', '<cmd>Gitsigns toggle_deleted <CR>', noremap_silent)
 
