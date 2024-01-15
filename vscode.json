@@ -1,0 +1,28 @@
+{
+    "workbench.colorTheme": "j_blow",
+    "window.zoomLevel": 1,
+    "editor.fontVariations": false,
+    "editor.fontFamily": "Iosevka",
+    "explorer.confirmDelete": false,
+    "editor.fontSize": 13,
+    // Bracket-pair colorization
+    "editor.bracketPairColorization.enabled": false,
+    // Bracket-pair guides
+    "editor.guides.bracketPairsHorizontal": false,
+    "editor.guides.highlightActiveBracketPair": false,
+    // Indentation guides
+    "editor.guides.indentation": false,
+    "editor.guides.highlightActiveIndentation": false,
+    "workbench.sideBar.location": "right",
+    "window.menuBarVisibility": "compact",
+    // Relative line numbers
+    "editor.lineNumbers": "relative",
+    // removes minimap
+    "editor.minimap.enabled": false,
+    // removes whitespace chars
+    "editor.renderWhitespace": "all",
+    // removes highlights occurrences (still works when you select a word)
+    "editor.occurrencesHighlight": "off",
+    // remove labels
+    "editor.inlayHints.enabled": "off"
+}
