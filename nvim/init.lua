@@ -24,15 +24,9 @@ vim.api.nvim_exec([[
 
 require 'lazy'.setup 'plugins'
 
--- require 'which_key_bindings'
--- require 'overseer' .setup()
-require 'cmp_setup'
-require 'lsp_cfg'
-require 'neogit_cfg'
-require 'gitsigns_cfg'
-
 require 'netrw'
 require 'options'
 require 'keymaps'
 
-require 'leap'.add_default_mappings()
+-- If this enabled, deleting with x in vertical selection doesn't work
+-- require 'leap'.add_default_mappings()

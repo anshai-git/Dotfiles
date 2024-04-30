@@ -12,7 +12,6 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 --  Modes:
-
 --  normal_mode:  "n"
 --  insert_mode:  "i"
 --  visual_mode:  "v"
@@ -20,57 +19,19 @@ vim.g.maplocalleader = " "
 --  term_mode: "t"
 --  command_mode: "c"
 
--- Using this with telesope to find files in the root of a git project
+-- Use with telesope to find files in the root of a git project
 function find_files_in_project_root(opts)
   opts = opts or {}
   opts.cwd = vim.fn.systemlist("git rev-parse --show-toplevel")[1]
   require 'telescope.builtin'.find_files(opts)
 end
 
--- Using this with telesope to live grep files in the root of a git project
+-- Use with telesope to live grep files in the root of a git project
 function live_grep_in_project_root(opts)
   opts = opts or {}
   opts.cwd = vim.fn.systemlist("git rev-parse --show-toplevel")[1]
   require 'telescope.builtin'.live_grep(opts)
 end
-
-function cargo_run()
-  local pre_populated = 'cargo run -q --'
-  local command = vim.fn.input('Command: ', pre_populated)
-
-   -- Create a new scratch buffer
-  local buffer_id = vim.api.nvim_create_buf(true, true)
-
-  vim.cmd("botright new | horizontal resize 15")
-  vim.api.nvim_buf_set_option(0, 'buftype', 'nofile')
-  vim.api.nvim_buf_set_option(0, 'bufhidden', 'wipe')
-  vim.api.nvim_buf_set_option(0, 'buflisted', false)
-  vim.api.nvim_buf_set_option(0, 'swapfile', false)
-
-  -- Open a job to run the command asynchronously
-  local job_id = vim.system({ 'cargo', 'build' }, {
-    text = true,
-    stdout = function(_, data)
-      -- Callback for stdout output
-      vim.schedule(function()
-        -- Switch to the scratch buffer
-        vim.api.nvim_set_current_buf(buffer_id)
-        vim.api.nvim_buf_set_lines(0, -1, -1, false, vim.fn.split(data, '\n'))
-        vim.api.nvim_set_current_buf(0)
-      end)
-    end,
-    stderr = function(_, data)
-      -- Callback for stdout output
-      vim.schedule(function()
-        vim.api.nvim_set_current_buf(buffer_id)
-        vim.api.nvim_buf_set_lines(0, -1, -1, false, vim.fn.split(data, '\n'))
-        vim.api.nvim_set_current_buf(0)
-      end)
-    end,
-  }, on_exit)
-end
-
-keymap('n', '<leader>cr', '<cmd>lua cargo_run()<CR>', noremap_silent)
 
 -- replace word
 keymap('n', '<leader>x', "*``cgn", noremap_silent)

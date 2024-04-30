@@ -30,8 +30,8 @@ local options = {
   cmdheight = 0,
 
   -- hidden characters
-  list = true,
-  listchars = "space:·",
+  -- list = true,
+  -- listchars = "space:·",
 
   -- smart case
   smartcase = true,
@@ -49,7 +49,6 @@ local options = {
   so = 5
 }
 
-
 for k, v in pairs(options) do
   vim.opt[k] = v
 end
@@ -57,4 +56,4 @@ end
 -- Other options
 vim.g.user_emmet_leader_key = '<C-e>'
 vim.opt.path:append '**'
-vim.cmd.colorscheme 'default'
+vim.cmd.colorscheme 'melange'
