@@ -58,32 +58,32 @@ keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition() <CR>", noremap)
 keymap("n", "gr", "<cmd>lua vim.lsp.buf.references() <CR>", noremap)
 
 -- Move plugin mappings
-keymap("n", "<A-j>", ":MoveLine(1)   <CR>", noremap_silent)
-keymap("n", "<A-k>", ":MoveLine(-1)  <CR>", noremap_silent)
-keymap("n", "<A-h>", ":MoveHChar(-1) <CR>", noremap_silent)
-keymap("n", "<A-l>", ":MoveHChar(1)  <CR>", noremap_silent)
-keymap("v", "<A-j>", ":MoveBlock(1)   <CR>", noremap_silent)
-keymap("v", "<A-k>", ":MoveBlock(-1)  <CR>", noremap_silent)
-keymap("v", "<A-h>", ":MoveHBlock(-1) <CR>", noremap_silent)
-keymap("v", "<A-l>", ":MoveHBlock(1)  <CR>", noremap_silent)
+-- keymap("n", "<A-j>", ":MoveLine(1)   <CR>", noremap_silent)
+-- keymap("n", "<A-k>", ":MoveLine(-1)  <CR>", noremap_silent)
+-- keymap("n", "<A-h>", ":MoveHChar(-1) <CR>", noremap_silent)
+-- keymap("n", "<A-l>", ":MoveHChar(1)  <CR>", noremap_silent)
+-- keymap("v", "<A-j>", ":MoveBlock(1)   <CR>", noremap_silent)
+-- keymap("v", "<A-k>", ":MoveBlock(-1)  <CR>", noremap_silent)
+-- keymap("v", "<A-h>", ":MoveHBlock(-1) <CR>", noremap_silent)
+-- keymap("v", "<A-l>", ":MoveHBlock(1)  <CR>", noremap_silent)
 
 -- Append empty line
 keymap("n", "<S-Enter>", "O<ESC>", noremap_silent)
 keymap("n", "<Enter>", "o<ESC>", noremap_silent)
 
 -- Resession plugin mappings
-local resession = require('resession')
-keymap("n", "<leader>ss", "resession.save", noremap_silent)
-keymap("n", "<leader>sl", "resession.load", noremap_silent)
-keymap("n", "<leader>sd", "resession.delete", noremap_silent)
+-- local resession = require('resession')
+-- keymap("n", "<leader>ss", "resession.save", noremap_silent)
+-- keymap("n", "<leader>sl", "resession.load", noremap_silent)
+-- keymap("n", "<leader>sd", "resession.delete", noremap_silent)
 
 -- Telescope plugin mappings
-local builtin = require('telescope.builtin')
-keymap('n', '<leader>ff', "<cmd>lua find_files_in_project_root() <CR>", {})
-keymap('n', '<leader>fg', "<cmd>lua live_grep_in_project_root() <CR>", {})
-keymap('n', '<leader>fr', "<cmd>Telescope oldfiles <CR>", {})
-keymap('n', '<leader>fb', "<cmd>Telescope buffers <CR>", {})
-keymap('n', '<leader>fh', "<cmd>Telescope help_tags <CR>", {})
+-- local builtin = require('telescope.builtin')
+-- keymap('n', '<leader>ff', "<cmd>lua find_files_in_project_root() <CR>", {})
+-- keymap('n', '<leader>fg', "<cmd>lua live_grep_in_project_root() <CR>", {})
+-- keymap('n', '<leader>fr', "<cmd>Telescope oldfiles <CR>", {})
+-- keymap('n', '<leader>fb', "<cmd>Telescope buffers <CR>", {})
+-- keymap('n', '<leader>fh', "<cmd>Telescope help_tags <CR>", {})
 
 -- Neogit
 keymap('n', '<leader>gg', "<cmd> Neogit kind=split <CR>", noremap_silent)

@@ -1,3 +1,0 @@
-return {
-  "karoliskoncevicius/sacredforest-vim"
-}

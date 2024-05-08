@@ -1,3 +1,0 @@
-return {
-  'mikesmithgh/gruvsquirrel.nvim'
-}

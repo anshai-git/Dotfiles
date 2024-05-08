@@ -1,3 +1,0 @@
-return {
-  "devsjc/vim-jb"
-}

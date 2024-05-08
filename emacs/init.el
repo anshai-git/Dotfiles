@@ -12,7 +12,7 @@
 (global-display-line-numbers-mode 1)
 
 ;; Font
-(set-frame-font "Iosevka Nerd Font" )
+;; (set-frame-font "Iosevka Nerd Font" )
 
 ;; Move between windows with `SHIFT + arrow`
 (windmove-default-keybindings)
@@ -21,6 +21,9 @@
 ;; (package-install 'gruber-darker-theme)
 ;; (package-install 'catppuccin-theme)
 (package-install 'creamsody-theme)
+
+;; MAC SPECIFIC
+(setq mac-option-modifier 'meta)
 
 ;; (load-theme 'gruber-darker t)
 ;; (setq catppuccin-flavor 'frappe) 
