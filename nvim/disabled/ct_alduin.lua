@@ -1,3 +1,0 @@
-return {
-  "AlessandroYorba/Alduin"
-}
