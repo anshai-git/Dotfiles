@@ -53,6 +53,7 @@ for k, v in pairs(options) do
   vim.opt[k] = v
 end
 
+vim.g.markdown_fenced_languages = { 'bash=sh', 'java', 'lua', 'javascript=js', 'typescript=ts', 'rust', 'c', 'cpp' }
 -- Other options
 vim.g.user_emmet_leader_key = '<C-e>'
 vim.opt.path:append '**'
