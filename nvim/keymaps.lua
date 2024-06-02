@@ -47,11 +47,6 @@ keymap('n', '<C-l>', '<C-w>l', noremap)
 keymap('n', '<Left>', '<C-o>', noremap)
 keymap('n', '<Right>', '<C-i>', noremap)
 
--- built-in terminal
-keymap("n", "<leader>t", "<cmd>split<CR> <cmd>term<CR>i", noremap_silent)
-keymap("t", "<Esc>", "<C-\\><C-N>", noremap)
-keymap("t", "<C-x>", "<cmd>q<CR>", noremap)
-
 -- lsp
 keymap("n", "<leader>lf", "<cmd>lua vim.lsp.buf.format() <CR>", noremap_silent)
 keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition() <CR>", noremap)
