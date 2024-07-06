@@ -44,7 +44,7 @@ style = "Regular"
 
 [window]
 dynamic_title = true
-opacity = 1.0
+opacity = 0.9
 startup_mode = "Windowed"
 
 [window.dimensions]
@@ -52,5 +52,5 @@ columns = 100
 lines = 25
 
 [window.padding]
-x = 0
-y = 0
+x = 5
+y = 5

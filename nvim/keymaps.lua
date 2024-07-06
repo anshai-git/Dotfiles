@@ -11,6 +11,7 @@ keymap("", "<Space>", "<Nop>", noremap_silent)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
+
 --  Modes:
 --  normal_mode:  "n"
 --  insert_mode:  "i"
@@ -74,11 +75,11 @@ keymap("n", "<leader>sd", "resession.delete", noremap_silent)
 
 -- Telescope plugin mappings
 local builtin = require('telescope.builtin')
-keymap('n', '<leader>ff', "<cmd>lua find_files_in_project_root() <CR>", {})
-keymap('n', '<leader>fg', "<cmd>lua live_grep_in_project_root() <CR>", {})
-keymap('n', '<leader>fr', "<cmd>Telescope oldfiles <CR>", {})
-keymap('n', '<leader>fb', "<cmd>Telescope buffers <CR>", {})
-keymap('n', '<leader>fh', "<cmd>Telescope help_tags <CR>", {})
+keymap('n', '<leader>ff', "<cmd>Telescope find_files theme=ivy <CR>", {})
+keymap('n', '<leader>fg', "<cmd>Telescope live_grep theme=ivy <CR>", {})
+keymap('n', '<leader>fr', "<cmd>Telescope oldfiles theme=ivy <CR>", {})
+keymap('n', '<leader>fb', "<cmd>Telescope buffers theme=ivy <CR>", {})
+keymap('n', '<leader>fh', "<cmd>Telescope help_tags theme=ivy <CR>", {})
 
 -- Neogit
 keymap('n', '<leader>gg', "<cmd> Neogit kind=split <CR>", noremap_silent)

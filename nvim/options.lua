@@ -2,6 +2,8 @@ local options = {
   -- Titlebar (filename on top side)
   title = true,
 
+  cursorline = true,
+
   -- highlight all matches on previous search pattern
   hlsearch = true,
 
@@ -46,7 +48,12 @@ local options = {
   -- wildmenu = true,
 
   -- Scroll offset
-  so = 5
+  so = 5,
+
+  foldcolumn = '1', -- '0' is not bad
+  foldlevel = 99, -- Using ufo provider need a large value, feel free to decrease the value
+  foldlevelstart = 5,
+  foldenable = true
 }
 
 for k, v in pairs(options) do
@@ -57,4 +64,4 @@ vim.g.markdown_fenced_languages = { 'bash=sh', 'java', 'lua', 'javascript=js', '
 -- Other options
 vim.g.user_emmet_leader_key = '<C-e>'
 vim.opt.path:append '**'
-vim.cmd.colorscheme 'catppuccin-frappe'
+vim.cmd.colorscheme 'tokyonight-night'

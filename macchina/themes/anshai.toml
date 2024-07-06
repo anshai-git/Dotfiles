@@ -1,0 +1,8 @@
+spacing   = 4
+padding   = 2
+key_color = "#00BD9D"
+separator = ""
+
+[custom_ascii]
+path  = "~/.config/macchina/ascii/skull.ascii"
+color = "#8BD7D2"

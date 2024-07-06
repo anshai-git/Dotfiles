@@ -2,7 +2,7 @@ return {
     "tris203/precognition.nvim",
     --event = "VeryLazy",
     config = {
-    -- startVisible = true,
+    startVisible = false,
     -- showBlankVirtLine = true,
     -- highlightColor = { link = "Comment" },
     -- hints = {

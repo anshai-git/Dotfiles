@@ -23,7 +23,7 @@ return {
 
     require('mason').setup({})
     require('mason-lspconfig').setup({
-      ensure_installed = { 'jdtls' },
+      ensure_installed = { 'jdtls', 'kotlin_language_server' },
       handlers = {
         -- this first function is the "default handler"
         -- it applies to every language server without a "custom handler"
@@ -47,6 +47,25 @@ return {
     local cmp_action = require('lsp-zero').cmp_action()
 
     cmp.setup({
+      window = {
+        documentation = cmp.config.window.bordered(),
+        completion =  cmp.config.window.bordered({
+          winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,Search:None",
+          col_offset = -3,
+          side_padding = 0,
+        }),
+      },
+      formatting = {
+        fields = { "kind", "abbr", "menu" },
+        format = function(entry, vim_item)
+          local kind = require("lspkind").cmp_format({ mode = "symbol_text", maxwidth = 50 })(entry, vim_item)
+          local strings = vim.split(kind.kind, "%s", { trimempty = true })
+          kind.kind = " " .. (strings[1] or "") .. " "
+          kind.menu = "    (" .. (strings[2] or "") .. ")"
+
+          return kind
+        end,
+      },
       mapping = cmp.mapping.preset.insert({
         ['<CR>'] = cmp.mapping.confirm({ select = true }),
         ['<C-b>'] = cmp.mapping.scroll_docs(-4),

@@ -3,5 +3,12 @@ return {
 	tag = '0.1.3',
 	dependencies = {
 		{ 'nvim-lua/plenary.nvim' }
-	}
+	},
+  config = function()
+    require 'telescope'.setup({
+      defaults = {
+        path_display = {"tail"}
+      }
+    })
+  end
 }

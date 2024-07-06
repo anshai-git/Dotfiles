@@ -12,6 +12,7 @@ if not vim.loop.fs_stat(lazypath) then
   })
 end
 
+
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 vim.cmd("highlight! link SignColumn LineN");
@@ -29,7 +30,7 @@ require 'options'
 require 'keymaps'
 
 -- Personal Plugin
-require 'explore'.setup()
+-- require 'explore'.setup()
 
 
 -- If this enabled, deleting with x in vertical selection doesn't work
