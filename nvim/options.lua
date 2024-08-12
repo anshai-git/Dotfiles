@@ -64,4 +64,4 @@ vim.g.markdown_fenced_languages = { 'bash=sh', 'java', 'lua', 'javascript=js', '
 -- Other options
 vim.g.user_emmet_leader_key = '<C-e>'
 vim.opt.path:append '**'
-vim.cmd.colorscheme 'tokyonight-night'
+vim.cmd.colorscheme 'gruvsquirrel'
