@@ -75,7 +75,7 @@ keymap("n", "<leader>sd", "resession.delete", noremap_silent)
 
 -- Telescope plugin mappings
 local builtin = require('telescope.builtin')
-keymap('n', '<leader>ff', "<cmd>Telescope find_files theme=ivy <CR>", {})
+keymap('n', '<leader>ff', "<cmd>FzfLua files<CR>", {})
 keymap('n', '<leader>fg', "<cmd>Telescope live_grep theme=ivy <CR>", {})
 keymap('n', '<leader>fr', "<cmd>Telescope oldfiles theme=ivy <CR>", {})
 keymap('n', '<leader>fb', "<cmd>Telescope buffers theme=ivy <CR>", {})
@@ -98,3 +98,7 @@ keymap('n', '<leader>dd', '<cmd>Oil <CR>', noremap_silent)
 
 -- Trouble
 keymap('n', '<leader>tt', '<cmd>TroubleToggle <CR>', noremap_silent)
+
+-- Forawd, Backward
+keymap('n', '<C-Left>', '<C-o>', noremap_silent)
+keymap('n', '<C-Right>', '<C-S-o>', noremap_silent)
