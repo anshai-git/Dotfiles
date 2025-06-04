@@ -1,3 +1,0 @@
-return {
-  "chama-chomo/grail"
-}

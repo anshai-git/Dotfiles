@@ -68,10 +68,10 @@ keymap("n", "<S-Enter>", "O<ESC>", noremap_silent)
 keymap("n", "<Enter>", "o<ESC>", noremap_silent)
 
 -- Resession plugin mappings
-local resession = require('resession')
-keymap("n", "<leader>ss", "resession.save", noremap_silent)
-keymap("n", "<leader>sl", "resession.load", noremap_silent)
-keymap("n", "<leader>sd", "resession.delete", noremap_silent)
+-- local resession = require('resession')
+-- keymap("n", "<leader>ss", "resession.save", noremap_silent)
+-- keymap("n", "<leader>sl", "resession.load", noremap_silent)
+-- keymap("n", "<leader>sd", "resession.delete", noremap_silent)
 
 -- Telescope plugin mappings
 local builtin = require('telescope.builtin')

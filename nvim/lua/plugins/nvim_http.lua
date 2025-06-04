@@ -1,3 +1,0 @@
-return {
-  'BlackLight/nvim-http'
-}
