@@ -12,7 +12,6 @@ if not vim.loop.fs_stat(lazypath) then
   })
 end
 
-
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 vim.cmd("highlight! link SignColumn LineN");
