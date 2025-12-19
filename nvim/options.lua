@@ -23,10 +23,10 @@ local options = {
   expandtab = true,
 
   -- set numbered lines
-  number = true,
+  number = false,
 
   -- line counting from the current line number
-  relativenumber = true,
+  relativenumber = false,
 
   -- more space in the neovim command line for displaying messages
   cmdheight = 0,
@@ -64,4 +64,4 @@ vim.g.markdown_fenced_languages = { 'bash=sh', 'java', 'lua', 'javascript', 'typ
 -- Other options
 vim.g.user_emmet_leader_key = '<C-e>'
 vim.opt.path:append '**'
-vim.cmd.colorscheme 'melange'
+vim.cmd.colorscheme 'naysayer'
