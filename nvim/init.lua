@@ -27,10 +27,11 @@ require 'lazy'.setup 'plugins'
 require 'netrw'
 require 'options'
 require 'keymaps'
+require 'lsp'
 
 -- Personal Plugin
 -- require 'explore'.setup()
 
 
--- If this enabled, deleting with x in vertical selection doesn't work
+-- TODO: If this enabled, deleting with x in vertical selection doesn't work
 -- require 'leap'.add_default_mappings()
