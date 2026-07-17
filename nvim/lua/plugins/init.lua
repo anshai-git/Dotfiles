@@ -39,6 +39,9 @@ vim.pack.add({
 
   -- lsp / lang
   'https://github.com/williamboman/mason.nvim',
+  -- provides `lsp/*.lua` default configs (ts_ls, angularls, html, cssls, eslint, rust_analyzer, ...)
+  -- for vim.lsp.enable() to pick up; its plugin/ script only adds :Lsp* user commands, no setup() call needed
+  'https://github.com/neovim/nvim-lspconfig',
   'https://github.com/mfussenegger/nvim-jdtls',
   'https://github.com/udalov/kotlin-vim',
 }, { load = true }) -- source plugin/ and ftdetect/ scripts immediately, matching lazy.nvim's default eager load
