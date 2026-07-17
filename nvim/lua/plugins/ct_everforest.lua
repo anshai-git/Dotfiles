@@ -1,2 +1,0 @@
-
-return { "sainnhe/everforest" }

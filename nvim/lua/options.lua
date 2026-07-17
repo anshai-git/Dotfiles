@@ -23,7 +23,7 @@ local options = {
   expandtab = true,
 
   -- set numbered lines
-  number = false,
+  number = true,
 
   -- line counting from the current line number
   relativenumber = false,
