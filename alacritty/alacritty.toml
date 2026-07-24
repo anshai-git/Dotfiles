@@ -1,3 +1,13 @@
+[[keyboard.bindings]]
+key = "C"
+mods = "Control|Shift"
+action = "Copy"
+
+[[keyboard.bindings]]
+key = "V"
+mods = "Control|Shift"
+action = "Paste"
+
 [colors.bright]
 black = "0x9ea7b3"
 blue = "0x91cbff"
